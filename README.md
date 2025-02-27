@@ -1,2 +1,2 @@
-# Pok-mon-Explorer
+# Pokemon-Explorer
 Pokémon Explorer
