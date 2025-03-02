@@ -4,7 +4,7 @@ import usePokemon from '../hooks/usePokemon';
 const PokemonList = ({ onSelectPokemon }) => {
   const [page, setPage] = useState(1);
   const [filter, setFilter] = useState('');
-  const [selectedPokemon, setSelectedPokemon] = useState(null); // Estado para el Pokémon seleccionado
+  const [selectedPokemon, setSelectedPokemon] = useState(null); 
   const { data, loading, error } = usePokemon(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${(page - 1) * 20}`);
 
   if (loading) return <p>Cargando...</p>;
@@ -15,8 +15,8 @@ const PokemonList = ({ onSelectPokemon }) => {
   );
 
   const handlePokemonClick = (pokemonName) => {
-    setSelectedPokemon(pokemonName); // Actualiza el Pokémon seleccionado
-    onSelectPokemon(pokemonName); // Llama a la función para mostrar el detalle
+    setSelectedPokemon(pokemonName); 
+    onSelectPokemon(pokemonName); 
   };
 
   return (
